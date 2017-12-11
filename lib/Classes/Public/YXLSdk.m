@@ -123,7 +123,7 @@
     if ([UIApplication.sharedApplication canOpenURL:openURL]) {
         [self authorizeWithOpenURL:openURL completionHandler:^(BOOL success) {
             if (NO == success) {
-                [self tryOpenUniversalLinkUrlWithState:state pkce:pkce];
+                [self openBrowserUrlWithState:state pkce:pkce];
             }
         }];
     }
